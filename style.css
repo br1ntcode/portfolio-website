@@ -330,12 +330,13 @@ header img {
 .contact-container {
     display: flex;
     justify-content: center;
-    gap: 25px;
+    gap: 30px;
     flex-wrap: wrap;
 }
 
 .contact-card {
-    width: 280px;
+    flex:1;
+    max-width: 320px;
     background: white;
     padding: 25px;
     border-radius: 12px;
