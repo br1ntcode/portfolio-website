@@ -313,6 +313,25 @@ header img {
 
 .contact-card h3 {
     color: #1d4ed8;
+    margin-bottom: 20px;
+}
+
+.contact-card a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 22px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.contact-card a:hover {
+    background: #1d4ed8;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(37,99,235,.3);
 }
 
 #contact {
@@ -419,4 +438,10 @@ section {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #1d4ed8;
+}
+
+.contact-card p{
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
 }
