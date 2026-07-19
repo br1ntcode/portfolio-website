@@ -8,24 +8,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="images/favicon.png">
+    <script>
+        if (localStorage.getItem("theme") === "dark") {
+            document.documentElement.classList.add("dark");
+        }
+    </script>
     <link rel="stylesheet"href="style.css">
 </head>
 <body>
 
 <nav>
-
-    <div class="logo">
-        Brent Matthew
-    </div>
-
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-
+    <button id="theme-toggle">🌙</button>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
 </nav>
 
 <header id="home">
@@ -34,7 +31,7 @@
 
     <h1>Brent Matthew</h1>
 
-    <h2>Aspiring Cloud Engineer</h2>
+    <p id="typing"></p>
 
     <p>
         Computer Engineering Graduate
@@ -87,61 +84,111 @@
     <div class="project-container">
 
         <div class="project-card">
-            <h3>AWS Portfolio Website</h3>
-            <p>
-                A personal portfolio website hosted on AWS using HTML, CSS,
-                JavaScript, Amazon S3, and CloudFront.
-            </p>
-        </div>
+
+    <h3>AWS Portfolio Website</h3>
+
+    <p>
+        A personal portfolio website built using
+        HTML, CSS, and JavaScript, deployed with
+        GitHub Pages. This project showcases my
+        skills, certifications, and cloud journey.
+    </p>
+
+        <h4>Technologies</h4>
+
+    <div class="tech-stack">
+    HTML • CSS • JavaScript • Git • GitHub Pages
+    </div>
+
+    <div class="project-buttons">
+        <a href="https://br1ntcode.github.io/portfolio-website/" class="btn" target="_blank">
+            Live Demo
+        </a>
+
+        <a href="https://github.com/br1ntcode/portfolio-website" class="btn" target="_blank">
+            GitHub
+        </a>
+    </div>
+
+    </div>
 
         <div class="project-card">
-            <h3>Wearable IoT Device</h3>
-            <p>
-                Developed an IoT wearable device for monitoring carbon monoxide
-                and temperature with AI-based alerts for welders.
-            </p>
-        </div>
+
+    <h3>Wearable IoT Device</h3>
+
+    <p>
+        Developed an IoT wearable device for monitoring carbon monoxide and
+        temperature with AI-based alerts for welders using ESP32,
+        Firebase, and AI-based prediction.
+    </p>
+
+    <div class="tech-stack">
+        ESP32 • Firebase • IoT • AI • C++
+    </div>
+
+    <div class="project-buttons">
+        <a href="#" class="btn">
+            Details
+        </a>
+    </div>
+
+    </div>
 
         <div class="project-card">
-            <h3>Linux Server</h3>
-            <p>
-                Configured an Ubuntu server, installed Nginx,
-                and deployed a simple website.
-            </p>
-        </div>
+
+    <h3>Linux Server Project</h3>
+
+    <p>
+        Configured an Ubuntu server, installed Nginx,
+        managed users and services, and hosted a simple website.
+    </p>
+
+    <div class="tech-stack">
+        Linux • Ubuntu • Nginx • Bash
+    </div>
+
+    <div class="project-buttons">
+        <a href="#" class="btn">
+            Coming Soon
+        </a>
+    </div>
 
     </div>
 
 </section>
 
-<section id="skills">
+<section id="github">
+    <h2>Latest GitHub Repositories</h2>
 
-    <h2>Technical Skills</h2>
+    <div id="github-projects" class="projects-grid">
 
-    <div class="skills-container">
+    </div>
+</section>
 
+<section id="skills" class="skills-section">
+    <h2>Skills</h2>
+
+    <div class="skills-grid">
         <div class="skill-card">
             <h3>Cloud</h3>
-            <p>AWS (Learning)</p>
+            <p>AWS (Cloud Practitioner), S3, EC2, IAM</p>
         </div>
 
         <div class="skill-card">
             <h3>Programming</h3>
-            <p>Python, C++, JavaScript</p>
+            <p>Python, C++, JavaScript, HTML, CSS</p>
         </div>
 
         <div class="skill-card">
-            <h3>Operating Systems</h3>
-            <p>Linux, Windows, macOS</p>
+            <h3>Systems</h3>
+            <p>Linux, Git, Networking, Docker</p>
         </div>
 
         <div class="skill-card">
-            <h3>Tools</h3>
-            <p>Git, GitHub, VS Code</p>
+            <h3>Embedded / IoT</h3>
+            <p>ESP32, Firebase, MQTT, Sensors</p>
         </div>
-
     </div>
-
 </section>
 
 <section id="certifications">
@@ -185,35 +232,15 @@
 
 </section>
 
-<section id="contact">
-
+<section id="contact" class="contact">
     <h2>Contact Me</h2>
+    <p>I'm open to opportunities in Cloud Engineering, DevOps, and Software Development.</p>
 
-    <div class="contact-container">
-
-        <div class="contact-card">
-            <h3>Email</h3>
-            <a href="mailto:lachicabrentmatthew@gmail.com">
-            📧 Email Me
-            </a>
-        </div>
-
-        <div class="contact-card">
-            <h3>GitHub</h3>
-            <a href="https://github.com/br1ntcode" target="_blank">
-             💻 Visit GitHub
-            </a>
-        </div>
-
-        <div class="contact-card">
-            <h3>LinkedIn</h3>
-            <a href="https://www.linkedin.com/in/BrentMatthewLachica" target="_blank">
-             💼 View LinkedIn
-            </a>
-        </div>
-
+    <div class="contact-links">
+        <a href="mailto:lachicabrentmatthew@gmail.com">📧 Email</a>
+        <a href="https://github.com/br1ntcode" target="_blank">💻 GitHub</a>
+        <a href="https://linkedin.com/in/brent-matthew-lachica-5a68b6417/" target="_blank">💼 LinkedIn</a>
     </div>
-
 </section>
 
 <footer>
